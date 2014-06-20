@@ -26,7 +26,6 @@ public class FSSSearch {
 	
 	private Random rand = new Random();
 
-	private double lastOverallWeight;
 	private int numberOfFishIncreasedWeightLastIteration;
 	private boolean positiveC;
 	private double bestFitness;
@@ -40,7 +39,6 @@ public class FSSSearch {
 		this.school = new ArrayList<Fish>();
 		this.dimensions = 30;
 		this.schoolSize = 30;
-		this.lastOverallWeight = 0;
 		this.bestFitness = Double.MAX_VALUE;
 		this.numberOfFishIncreasedWeightLastIteration = 0;
 		this.positiveC = true;
@@ -264,7 +262,8 @@ public class FSSSearch {
 		return res;
 	}
 	
-	private double calculateFitnessa(double[] inputs) {
+	@SuppressWarnings("unused")
+	private double calculateFitnessSphere(double[] inputs) {
 		double res = 0;
 		for (int i = 0; i < inputs.length; i++)
 			res += Math.pow(inputs[i], 2);
