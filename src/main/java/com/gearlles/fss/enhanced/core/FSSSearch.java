@@ -312,7 +312,7 @@ public class FSSSearch {
 				false // Configure chart to generate URLs?
 				);
 		try {
-			ChartUtilities.saveChartAsJPEG(new File("C:\\Users\\Gearlles\\Desktop\\chart.jpg"), chart, 500, 300);
+			ChartUtilities.saveChartAsJPEG(new File("./chart.jpg"), chart, 500, 300);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
